@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "Biblioteca IPF",
+    "slug": "biblioteca-ipf",
+    "scheme": "bibliotecaipf",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "experiments": {
+      "typedRoutes": true
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Usamos tu cámara para leer el ISBN impreso en el código de barras del libro.",
+          "microphonePermission": false,
+          "recordAudioAndroid": false,
+          "blockedPermissions": [
+            "android.permission.RECORD_AUDIO"
+          ]
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "color": "#1D4ED8",
+          "sounds": []
+        }
+      ],
+      "expo-font"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Usamos tu cámara para leer el ISBN impreso en el código de barras del libro."
+      }
+    },
+    "android": {
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.POST_NOTIFICATIONS"
+      ],
+      "blockedPermissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.READ_EXTERNAL_STORAGE"
+      ]
+    }
+  }
+}
